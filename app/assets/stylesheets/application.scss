@@ -56,18 +56,34 @@ h1,h2,h3,h4,h5,h6 {
 
 
 // NAV BAR
-.header {
+nav {
   width: 100%;
-  background-color: rgba(255,255,255,0.95);
-  border: solid 2px #fff;
   padding: 10px;
-  position: fixed;
   img {
     display: block;
     margin: auto;
     width: 200px;
   }
+  .btn-group {
+    position: fixed;
+    right: 5vw;
+    top: 1vh;
+    .btn-nav {
+      border: none;
+      background-color: transparent;
+    }
+    .dropdown-menu {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
+.navbar-default {
+  background-color: rgba(255,255,255,0.95);
+  border: none;
+  radius: 0;
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

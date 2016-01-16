@@ -1,0 +1,4 @@
+<h1>Entries#index</h1>
+<% @entries.each do |entry| %>
+  <p><%= link_to entry.title, entry %></p>
+<% end %>

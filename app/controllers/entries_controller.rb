@@ -1,11 +1,8 @@
 class EntriesController < ApplicationController
-  before_action :set_entry, :except => [:index, :new, :create]
+  before_action :set_entry, :except => [:index, :new, :create, :dev, :media]
 
   def index
     @entries = Entry.all
-  end
-
-  def show
   end
 
   def new
@@ -45,6 +42,14 @@ class EntriesController < ApplicationController
       flash[:error] = "Entry was not deleted, please try again."
       redirect_to :back
     end
+  end
+
+  def media
+    @entries = Entry.where(category_id: 3)
+  end
+
+  def dev
+    @entries = Entry.where(category_id: 4)
   end
 
   private

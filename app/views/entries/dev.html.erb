@@ -1,0 +1,7 @@
+<div id="dev">
+  <h1>I develop applications that connect people to tools, ideas, and each other.</h1>
+
+  <% @entries.each do |entry| %>
+    <h2><%= link_to entry.title, entry %></h2>
+  <% end %>
+</div>

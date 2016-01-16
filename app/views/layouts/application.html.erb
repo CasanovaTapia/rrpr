@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="header">
+    <%= link_to(root_path) do %>
+      <%= image_tag("logochar.png") %>
+    <% end %>
+  </div>
+  
   <!-- Flash messages  -->
   <% if flash[:notice] %>
     <div class="alert alert-success">
@@ -27,9 +32,7 @@
   <% end %>
 
 
-  <div class="header">
-    <%= image_tag("logochar.png") %>
-  </div>
+
 
 <div class="container-fluid">
 <div class="page-bg">

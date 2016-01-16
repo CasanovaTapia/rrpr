@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   resources :entries
 
+  get 'dev', to: 'entries#dev', as: :entries_dev
+  get 'media', to: 'entries#media', as: :entries_media
+
   root to: 'static#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,2 +1,24 @@
-<h1><%= @entry.title %></h1>
-<%= link_to 'Delete', @entry, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+<div id="entry-show">
+  <h4><%= @entry.title %></h4>
+  <h1><%= @entry.tagline %></h1>
+  <div class="header-shot">
+    <%= image_tag("exampleshot.png") %>
+  </div>
+  <p><%= @entry.body %></p>
+  <div class="sec-shot row">
+    <div class="col-sm-4">
+      <%= image_tag("exampleshot.png") %>
+    </div>
+    <div class="col-sm-4">
+      <%= image_tag("exampleshot.png") %>
+    </div>
+    <div class="col-sm-4">
+      <%= image_tag("exampleshot.png") %>
+    </div>
+  </div>
+
+  <p class="small">
+    <%= link_to 'Back', :back %>
+    <%= link_to 'Delete', @entry, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+  </p>
+</div>

@@ -1,0 +1,7 @@
+<div id="media">
+  <h1>I assist emerging brands create their identity through digital media.</h1>
+
+  <% @entries.each do |entry| %>
+    <h2><%= link_to entry.title, entry %></h2>
+  <% end %>
+</div>

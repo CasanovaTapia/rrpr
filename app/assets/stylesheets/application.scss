@@ -2,16 +2,20 @@
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:700,700italic);
 @import "static.scss";
+@import "entries.scss";
 
 body {
-  background-color: #ddd;
+  background-color: #eee;
+}
+.page-bg {
+  padding-top: 10vh;
 }
 @media (max-width:767px) {
 
 }
 @media (min-width: 768px) {
   .page-bg {
-    padding: 2vh 20vh 2vh 20vh;
+    padding: 15vh 20vh 2vh 20vh;
   }
 }
 
@@ -42,7 +46,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 5em;
   }
   p {
-    font-size: 1.25em;
+    font-size: 1.4em;
     line-height: 1.5em;
   }
 }
@@ -54,8 +58,10 @@ h1,h2,h3,h4,h5,h6 {
 // NAV BAR
 .header {
   width: 100%;
-  background-color: #ccc;
+  background-color: rgba(255,255,255,0.95);
+  border: solid 2px #fff;
   padding: 10px;
+  position: fixed;
   img {
     display: block;
     margin: auto;

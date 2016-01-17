@@ -28,3 +28,6 @@ gem 'bootstrap-sass'
 
 gem 'faker'
 gem 'figaro'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'

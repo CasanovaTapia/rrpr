@@ -1,2 +1,4 @@
+<% if policy(@entry).edit? %>
 <h1>Edit</h1>
 <%= render 'form' %>
+<% end %>

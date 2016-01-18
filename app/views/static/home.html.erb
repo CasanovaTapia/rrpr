@@ -8,4 +8,11 @@
       <h2><%= link_to 'Rails Development', entries_dev_path %></h2>
     </div>
   </div>
+  <% if current_user && current_user.admin? %>
+    <p class="small">
+      Hello Ching.<br/>
+      <%= link_to 'New Entry', new_entry_path %>
+      <%= link_to 'Log Out', destroy_user_session_path, :method => :delete %>
+    </p>
+  <% end %>
 </div>

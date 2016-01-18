@@ -7,14 +7,17 @@ class EntriesController < ApplicationController
 
   def new
     @entry = Entry.new
+    authorize @entry
   end
 
   def edit
+    authorize @entry
   end
 
   def create
     @entry = Entry.new(entry_params)
 
+    authorize @entry
     if @entry.save
       flash[:notice] = "Entry created."
       redirect_to @entry
@@ -25,6 +28,7 @@ class EntriesController < ApplicationController
   end
 
   def update
+    authorize @entry
     if @entry.update_attributes(entry_params)
       flash[:notice] = "Entry updated."
       redirect_to @entry
@@ -35,6 +39,7 @@ class EntriesController < ApplicationController
   end
 
   def destroy
+    authorize @entry
     if @entry.destroy
       flash[:notice] = "Entry was deleted."
       redirect_to entries_path

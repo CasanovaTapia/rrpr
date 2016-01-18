@@ -33,8 +33,13 @@
     </div>
   </div>
 
+
   <p class="small">
     <%= link_to 'Back', :back %>
-    <%= link_to 'Delete', @entry, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+    <% if policy(@entry).edit? %>
+      <%= link_to 'Edit', edit_entry_path(@entry) %>
+      <%= link_to 'Delete', @entry, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+    <% end %>
   </p>
+
 </div>

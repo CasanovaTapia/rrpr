@@ -32,10 +32,13 @@
       <% end %>
     </div>
   </div>
-
-
+  <hr>
+  <h3 class="bottom-nav">
+    <%= mail_to 'ching@casanovatapia.com', 'Contact me' %>
+    or
+    <%= link_to 'previous page', :back %>
+  </h3>
   <p class="small">
-    <%= link_to 'Back', :back %>
     <% if policy(@entry).edit? %>
       <%= link_to 'Edit', edit_entry_path(@entry) %>
       <%= link_to 'Delete', @entry, :method => :delete, :data => { :confirm => 'Are you sure?' } %>

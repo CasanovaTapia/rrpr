@@ -1,5 +1,5 @@
 <div id="media">
-  <h1>I assist emerging brands create their identity through digital media.</h1>
+  <h1 class="head-text">I assist emerging brands create their identity through digital media.</h1>
 
     <div class="row">
       <% @entries.each do |entry| %>
@@ -7,12 +7,19 @@
           <%= link_to entry do %>
             <% if entry.avatar? %>
               <%= image_tag(entry.avatar.url) %>
+              <span class="text-content"><span><%= entry.title %></span></span>
             <% else %>
               <%= image_tag("exampleshot.png") %>
+              <h2><span class="text-content"><span><%= entry.title %></span></span></h2>
             <% end %>
-            <h2><%= entry.title %></h2>
           <% end %>
         </div>
       <% end %>
     </div>
+    <hr>
+    <h3 class="bottom-nav">
+      <%= mail_to 'ching@casanovatapia.com', 'Contact me' %>
+      or
+      <%= link_to 'see my Web Applications.', entries_dev_path %>
+    </h3>
 </div>

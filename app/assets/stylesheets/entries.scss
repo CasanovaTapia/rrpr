@@ -1,5 +1,11 @@
 #dev, #media {
-  padding-top: 10vh;
+  padding-top: 5vh;
+  .entry-grid {
+    padding-top: 5vh;
+    img {
+      width: 100%;
+    }
+  }
 }
 
 #entry-show {

@@ -1,7 +1,18 @@
 <div id="media">
   <h1>I assist emerging brands create their identity through digital media.</h1>
 
-  <% @entries.each do |entry| %>
-    <h2><%= link_to entry.title, entry %></h2>
-  <% end %>
+    <div class="row">
+      <% @entries.each do |entry| %>
+        <div class="col-sm-6 entry-grid">
+          <%= link_to entry do %>
+            <% if entry.avatar? %>
+              <%= image_tag(entry.avatar.url) %>
+            <% else %>
+              <%= image_tag("exampleshot.png") %>
+            <% end %>
+            <h2><%= entry.title %></h2>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
 </div>

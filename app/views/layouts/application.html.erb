@@ -7,53 +7,64 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-  <%= link_to(root_path) do %>
-    <%= image_tag("logochar.png") %>
-  <% end %>
-  <!-- <div class="btn-group">
-    <button type="button" class="btn btn-nav dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="caret"></span>
-      <span class="caret"></span>
-      <span class="caret"></span>
-      <span class="caret"></span>
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Action</a></li>
-      <li><a href="#">Another action</a></li>
-      <li><a href="#">Something else here</a></li>
-      <li role="separator" class="divider"></li>
-      <li><a href="#">Separated link</a></li>
-    </ul>
-  </div> -->
-</nav>
+<div id="container">
+  <div id="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <%= link_to(root_path) do %>
+        <%= image_tag("logochar.png") %>
+      <% end %>
+      <!-- <div class="btn-group">
+        <button type="button" class="btn btn-nav dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="caret"></span>
+          <span class="caret"></span>
+          <span class="caret"></span>
+          <span class="caret"></span>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div> -->
+    </nav>
+  </div>
+  <div id="body">
+      <!-- Flash messages  -->
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:error] %>
+        <div class="alert alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:error] %>
+        </div>
+      <% elsif flash[:alert] %>
+        <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
 
-  <!-- Flash messages  -->
-  <% if flash[:notice] %>
-    <div class="alert alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:notice] %>
+
+
+
+    <div class="container-fluid">
+    <div class="page-bg">
+    <%= yield %>
     </div>
-  <% elsif flash[:error] %>
-    <div class="alert alert-danger">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:error] %>
-    </div>
-  <% elsif flash[:alert] %>
-    <div class="alert alert-warning">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:alert] %>
-    </div>
-  <% end %>
-
-
-
-
-<div class="container-fluid">
-<div class="page-bg">
-<%= yield %>
+  </div>
+  <div id="footer">
+    <p class="small text-center">
+      Casanova Tapia 2016.
+    </p>
+  </div>
 </div>
+
 
 </div>
 </body>

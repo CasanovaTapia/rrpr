@@ -11,13 +11,25 @@
   <p><%= @entry.body %></p>
   <div class="sec-shot row">
     <div class="col-sm-4">
-      <%= image_tag("exampleshot.png") %>
+      <% if @entry.shoti? %>
+        <%= image_tag(@entry.shoti.url) %>
+      <% else %>
+        <%= image_tag("exampleshot.png") %>
+      <% end %>
     </div>
     <div class="col-sm-4">
-      <%= image_tag("exampleshot.png") %>
+      <% if @entry.shotii? %>
+        <%= image_tag(@entry.shotii.url) %>
+      <% else %>
+        <%= image_tag("exampleshot.png") %>
+      <% end %>
     </div>
     <div class="col-sm-4">
-      <%= image_tag("exampleshot.png") %>
+      <% if @entry.shotiii? %>
+        <%= image_tag(@entry.shotiii.url) %>
+      <% else %>
+        <%= image_tag("exampleshot.png") %>
+      <% end %>
     </div>
   </div>
 

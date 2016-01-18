@@ -50,11 +50,11 @@ class EntriesController < ApplicationController
   end
 
   def media
-    @entries = Entry.where(category_id: 3)
+    @entries = Entry.where(category_id: 1)
   end
 
   def dev
-    @entries = Entry.where(category_id: 4)
+    @entries = Entry.where(category_id: 2)
   end
 
   private

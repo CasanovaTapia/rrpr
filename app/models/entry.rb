@@ -4,4 +4,12 @@ class Entry < ActiveRecord::Base
   mount_uploader :shoti, AvatarUploader
   mount_uploader :shotii, AvatarUploader
   mount_uploader :shotiii, AvatarUploader
+
+  def media?
+    category_id == Category.first.id
+  end
+
+  def dev?
+    category_id == Category.last.id
+  end
 end

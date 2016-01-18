@@ -1,13 +1,9 @@
 <div id="home">
-  <h1 class="text-center">Hi there.</h1>
-  <div class="row text-center">
-    <div class="col-md-6">
-      <h2><%= link_to 'Digital Media', entries_media_path %></h2>
-    </div>
-    <div class="col-md-6">
-      <h2><%= link_to 'Rails Development', entries_dev_path %></h2>
-    </div>
-  </div>
+  <h2>Hi, I'm Ching.</h2>
+  <h1>I create digital experiences that tell concise stories.</h1>
+  <h2><%= link_to 'See my Digital Media.', entries_media_path %></h2>
+  <h2><%= link_to 'See my Web Applications.', entries_dev_path %></h2>
+</div>
   <% if current_user && current_user.admin? %>
     <p class="small">
       Hello Ching.<br/>

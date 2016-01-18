@@ -1,9 +1,9 @@
-# Category.delete_all
-# Category.create!(title: 'media')
-# Category.create!(title: 'dev')
+Category.destroy_all
+Category.create!(title: 'media')
+Category.create!(title: 'dev')
 categories = Category.all
 
-Entry.delete_all
+Entry.destroy_all
 10.times do
   entry = Entry.create!(
     title:        Faker::Company.name,

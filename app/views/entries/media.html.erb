@@ -3,13 +3,13 @@
 
     <div class="row">
       <% @entries.each do |entry| %>
-        <div class="col-sm-6 entry-grid">
+        <div class="col-sm-4 entry-grid">
           <%= link_to entry do %>
-            <% if entry.avatar? %>
-              <%= image_tag(entry.avatar.url) %>
+            <% if entry.thumb? %>
+              <%= image_tag(entry.thumb.thumb.url) %>
               <span class="text-content"><span><%= entry.title %></span></span>
             <% else %>
-              <%= image_tag("exampleshot.png") %>
+              <%= image_tag("thumb.png") %>
               <h2><span class="text-content"><span><%= entry.title %></span></span></h2>
             <% end %>
           <% end %>

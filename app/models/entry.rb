@@ -4,6 +4,7 @@ class Entry < ActiveRecord::Base
   mount_uploader :shoti, AvatarUploader
   mount_uploader :shotii, AvatarUploader
   mount_uploader :shotiii, AvatarUploader
+  mount_uploader :thumb, AvatarUploader
 
   def media?
     category_id == Category.first.id

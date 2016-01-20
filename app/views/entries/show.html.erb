@@ -2,12 +2,58 @@
   <h4><%= @entry.title %></h4>
   <h1><%= @entry.tagline %></h1>
   <div class="header-shot">
-    <% if @entry.avatar? %>
-      <%= image_tag(@entry.avatar.url) %>
-    <% else %>
-      <%= image_tag("exampleshot.png") %>
-    <% end %>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <% if @entry.avatar? %>
+        <%= image_tag(@entry.avatar.url) %>
+      <% else %>
+        <%= image_tag("exampleshot.png") %>
+      <% end %>
+    </div>
+    <div class="item">
+      <% if @entry.shoti? %>
+        <%= image_tag(@entry.shoti.url) %>
+      <% else %>
+        <%= image_tag("exampleshot.png") %>
+      <% end %>
+    </div>
+    <div class="item">
+      <% if @entry.shotii? %>
+        <%= image_tag(@entry.shotii.url) %>
+      <% else %>
+        <%= image_tag("exampleshot.png") %>
+      <% end %>
+    </div>
+    <div class="item">
+      <% if @entry.shotiii? %>
+        <%= image_tag(@entry.shotiii.url) %>
+      <% else %>
+        <%= image_tag("exampleshot.png") %>
+      <% end %>
+    </div>
+
+    <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
   </div>
+
+
   <p><%= markdown_to_html @entry.body %></p>
   <div class="sec-shot row">
     <div class="col-sm-4">

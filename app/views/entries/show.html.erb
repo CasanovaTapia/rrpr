@@ -8,7 +8,7 @@
       <%= image_tag("exampleshot.png") %>
     <% end %>
   </div>
-  <p><%= @entry.body %></p>
+  <p><%= markdown_to_html @entry.body %></p>
   <div class="sec-shot row">
     <div class="col-sm-4">
       <% if @entry.shoti? %>

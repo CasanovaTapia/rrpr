@@ -35,8 +35,11 @@
 
 #entry-show {
   .header-shot {
+    .carousel-inner {
+      max-height: 500px;
+    }
     img {
-      padding: 5vh 0;
+      padding: 0;
       width: 100%;
     }
   }

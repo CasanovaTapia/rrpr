@@ -55,29 +55,6 @@
 
 
   <p><%= markdown_to_html @entry.body %></p>
-  <div class="sec-shot row">
-    <div class="col-sm-4">
-      <% if @entry.shoti? %>
-        <%= image_tag(@entry.shoti.url) %>
-      <% else %>
-        <%= image_tag("exampleshot.png") %>
-      <% end %>
-    </div>
-    <div class="col-sm-4">
-      <% if @entry.shotii? %>
-        <%= image_tag(@entry.shotii.url) %>
-      <% else %>
-        <%= image_tag("exampleshot.png") %>
-      <% end %>
-    </div>
-    <div class="col-sm-4">
-      <% if @entry.shotiii? %>
-        <%= image_tag(@entry.shotiii.url) %>
-      <% else %>
-        <%= image_tag("exampleshot.png") %>
-      <% end %>
-    </div>
-  </div>
   <hr>
   <h3 class="bottom-nav">
     <%= mail_to 'ching@casanovatapia.com', 'Contact me' %>

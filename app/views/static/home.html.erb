@@ -1,6 +1,19 @@
 <div id="home">
   <h3>Hi, I'm Ching.</h3>
-  <h1>I create digital experiences that tell concise stories.<br/><br/></h1>
+  <h1 id="carousel-text" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <span>I create digital experiences that</span>
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <b>tell concise stories.</b>
+      </div>
+
+      <div class="item">
+        <b>get me out of bed in the morning.</b>
+      </div>
+    </div>
+    <br/><br/>
+  </h1>
   <h3><%= link_to 'See my Digital Media.', entries_media_path %></h3>
   <h3><%= link_to 'See my Web Applications.', entries_dev_path %></h3>
 </div>

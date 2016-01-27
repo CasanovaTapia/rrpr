@@ -64,6 +64,6 @@ class EntriesController < ApplicationController
   end
 
   def entry_params
-    params.require(:entry).permit(:title, :tagline, :body, :category_id, :avatar, :shoti, :shotii, :shotiii)
+    params.require(:entry).permit(:title, :tagline, :body, :category_id, :avatar, :shoti, :shotii, :shotiii, :thumb)
   end
 end

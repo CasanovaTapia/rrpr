@@ -4,8 +4,9 @@
     margin-bottom: 5vh;
   }
   .entry-grid {
+    height: 250px;
     img {
-      height: 250px;
+      max-height:100%;
     }
     @media (min-width: 768px) {
       span.text-content {

@@ -3,7 +3,7 @@
 
   <div class="row entry-index">
     <% @entries.each do |entry| %>
-      <div class="col-sm-4 entry-grid">
+      <div class="col-md-4 entry-grid">
         <%= link_to entry do %>
           <% if entry.thumb? %>
             <%= image_tag(entry.thumb.thumb.url) %>

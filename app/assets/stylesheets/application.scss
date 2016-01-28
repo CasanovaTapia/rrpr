@@ -61,10 +61,12 @@ a.active {
 h1,h2,h3,h4,h5,h6 {
   font-weight: bold;
 }
-@media (min-width:768px) {
-
+@media screen and (max-width:767px) {
+  p {
+    font-size: 1.2em;
+  }
 }
-@media (min-width:992px) {
+@media screen and (min-width:768px) {
   h1 {
     font-size: 5em;
   }

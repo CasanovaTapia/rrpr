@@ -1,6 +1,6 @@
 <div id="entry-show">
-  <h4><%= @entry.title %></h4>
-  <h1><%= @entry.tagline %></h1>
+  <h3><%= @entry.title %></h3>
+  <h1 class="tagline"><%= @entry.tagline %></h1>
   <div class="header-shot">
 
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -53,8 +53,11 @@
   </a>
   </div>
 
+  <div class="entry-body">
+    <p><%= markdown_to_html @entry.body %></p>
+  </div>
 
-  <p><%= markdown_to_html @entry.body %></p>
+
   <hr>
   <h3 class="bottom-nav">
     <%= mail_to 'ching@casanovatapia.com', 'Contact me' %>

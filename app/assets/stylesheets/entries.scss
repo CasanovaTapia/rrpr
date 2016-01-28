@@ -3,12 +3,16 @@
   .head-text {
     margin-bottom: 5vh;
   }
+  .entry-index {
+    padding: 10vh;
+  }
   .entry-grid {
     height: 250px;
+    padding-top: 25px;
     img {
       max-height:100%;
     }
-    @media (min-width: 768px) {
+    @media screen and (min-width: 768px) {
       span.text-content {
         background: rgba(255,105,180,0.8);
         color: white;
@@ -34,8 +38,11 @@
 }
 
 #entry-show {
+  .tagline {
+    font-size: 4em;
+  }
   .header-shot {
-    padding-top: 3vh;
+    padding-top: 8vh;
     padding-bottom: 5vh;
     .carousel-inner {
       max-height: 500px;
@@ -45,10 +52,10 @@
       width: 100%;
     }
   }
-  .sec-shot {
-    img {
-      padding: 5vh 0;
-      width: 100%;
+  .entry-body {
+    padding: 20vh;
+    @media screen and (max-width:767px) {
+      padding: 10vh 1vh;
     }
   }
 }

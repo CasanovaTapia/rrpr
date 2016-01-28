@@ -13,11 +13,12 @@ html, body {
   min-height: 100%;
   position: relative;
 }
+
 #header {
   padding: 10px;
 }
 #body {
-  padding: 10px;
+  padding: 15vh;
   padding-bottom: 50px; // Height of footer
 }
 #footer {
@@ -31,16 +32,14 @@ html, body {
 body {
   background-color: rgba(250,250,250,1);
 }
-.page-bg {
-  padding-top: 10vh;
-}
-@media (max-width:767px) {
 
-}
-@media (min-width: 768px) {
-  .page-bg {
-    padding: 15vh 20vh 2vh 20vh;
+@media screen and (max-width:767px) {
+  #body {
+    padding: 10vh 1vh;
   }
+}
+@media screen and (min-width: 768px) {
+
 }
 
 // FONTS

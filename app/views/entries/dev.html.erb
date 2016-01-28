@@ -7,7 +7,7 @@
         <%= link_to entry do %>
           <% if entry.thumb? %>
             <%= image_tag(entry.thumb.thumb.url) %>
-            <span class="text-content"><span><%= entry.title %></span></span>
+            <h2><span class="text-content"><span><%= entry.title %></span></span></h2>
           <% else %>
             <%= image_tag("thumb.png") %>
             <h2><span class="text-content"><span><%= entry.title %></span></span></h2>

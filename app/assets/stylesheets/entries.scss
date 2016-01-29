@@ -91,6 +91,11 @@
   }
   .entry-body {
     padding: 20vh;
+    img {
+      display: block;
+      margin: 5vh auto;
+      width: 90%;
+    }
   }
   @media screen and (max-width:767px) {
     .title {

@@ -60,6 +60,11 @@
   }
   .idea-body {
     padding: 0 10vh;
+    img {
+      display: block;
+      margin: 5vh auto;
+      width: 90%;
+    }
   }
 
   @media screen and (max-width: 991px) {

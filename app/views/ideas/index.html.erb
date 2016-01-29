@@ -1,0 +1,31 @@
+<div id="ideas">
+  <h1>I sometimes publish my thoughts here</h1>
+
+  <div class="idea-list">
+    <% @ideas.each do |idea| %>
+      <% if policy(idea).show? %>
+        <%= link_to idea do %>
+          <div class="idea">
+            <h4><%= idea.title %></h4>
+            <h2><%= idea.tagline %></h2>
+          </div>
+        <% end %>
+        <% if policy(idea).edit? %>
+          <%= link_to 'Edit', edit_idea_path(idea) %>
+          <%= link_to 'Delete', idea, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <hr>
+    <h3 class="bottom-nav">
+      <%= mail_to 'ching@casanovatapia.com', 'Contact me' %>
+      or
+      <%= link_to 'previous page', :back %>
+    </h3>
+    <% if policy(@ideas).new? %>
+      <%= link_to 'New Idea!', new_idea_path %>
+    <% end %>
+
+</div>

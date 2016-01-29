@@ -1,5 +1,6 @@
 <div id="entry-show">
   <h3 class="title"><%= @entry.title %></h3>
+  <hr class="title-hr">
   <h1 class="tagline"><%= @entry.tagline %></h1>
   <div class="header-shot">
 
@@ -51,12 +52,15 @@
   </div>
 
 
-  <hr>
-  <h3 class="bottom-nav">
-    <%= mail_to 'ching@casanovatapia.com', 'Contact me' %>
-    or
-    <%= link_to 'previous page', :back %>
-  </h3>
+  <div class="bottom-nav">
+    <hr>
+    <h3>
+      <%= mail_to 'ching@casanovatapia.com', 'Contact me' %>
+      or
+      <%= link_to 'previous page', :back %>
+    </h3>
+  </div>
+  
   <p class="small">
     <% if policy(@entry).edit? %>
       <%= link_to 'Edit', edit_entry_path(@entry) %>

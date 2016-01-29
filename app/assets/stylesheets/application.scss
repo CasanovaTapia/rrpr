@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:700,700italic);
 @import "static.scss";
 @import "entries.scss";
+@import "ideas.scss";
 
 html, body {
     margin: 0;
@@ -43,6 +44,11 @@ body {
 }
 
 // FONTS
+hr {
+  height: 2px;
+  background: #FF69B4;
+  margin-bottom: -15px;
+}
 p {
   font-family: 'Playfair Display';
   font-weight: 700;
@@ -108,8 +114,17 @@ nav {
   radius: 0;
 }
 
-
-
+.bottom-nav {
+  margin-top: 20vh;
+  hr {
+    color: #555;
+  }
+  @media screen and (max-width:767px) {
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

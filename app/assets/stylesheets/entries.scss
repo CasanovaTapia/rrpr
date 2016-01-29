@@ -1,5 +1,4 @@
 #dev, #media {
-  padding-top: 5vh;
   .head-text {
     margin-bottom: 5vh;
   }
@@ -7,15 +6,19 @@
 
     @media screen and (max-width: 991px) {
       .entry-grid {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
         img {
-          max-width: 60%;
+          max-width: 100%;
         }
         padding-top: 5vh;
         span.text-content {
+          margin-top: -15px;
           display: block;
         }
-
         span.text-content span {
+          font-size: 16px;
           display: block;
         }
       }
@@ -58,6 +61,12 @@
 }
 
 #entry-show {
+  .title {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    letter-spacing: .02em;
+    margin-bottom: -10px;
+  }
   .carousel-control.left, .carousel-control.right {
     background-image: none;
     background-color: #transparent!important;
@@ -84,6 +93,9 @@
     padding: 20vh;
   }
   @media screen and (max-width:767px) {
+    .title {
+      font-size: 18px;
+    }
     .entry-body {
       padding: 10vh 1vh;
     }

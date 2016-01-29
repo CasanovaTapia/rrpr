@@ -1,3 +1,77 @@
-// Place all the styles related to the ideas controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#ideas {
+  .header {
+    padding-bottom: 10vh;
+  }
+  .idea-list {
+    padding: 10vh;
+    margin-bottom: 20vh;
+    .idea {
+      h4 {
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        letter-spacing: .02em;
+        margin-bottom: -5px;
+      }
+      width: 100%;
+      padding: 10vh;
+    }
+    .idea:hover,
+    .idea:focus,
+    .idea:active,
+    .idea.active {
+      background-color: #FFF3F9;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .header {
+      padding-bottom: 5vh;
+    }
+    .idea-list {
+      padding: 0;
+      .idea {
+        padding: 2vh;
+        h4 {
+          font-size: 16px;
+        }
+        h2 {
+          font-size: 24px;
+        }
+      }
+    }
+
+  }
+}
+
+
+#idea-show {
+  padding: 0 15vh;
+  .date {
+    margin-bottom: 5vh;
+  }
+  .title {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    letter-spacing: .02em;
+    margin-bottom: -10px;
+  }
+  .tagline {
+    margin-bottom: 20vh;
+  }
+  .idea-body {
+    padding: 0 10vh;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 0;
+    .title {
+      font-size: 18px;
+    }
+    .tagline {
+      font-size: 30px;
+    }
+    .idea-body {
+      padding: 0;
+    }
+  }
+}

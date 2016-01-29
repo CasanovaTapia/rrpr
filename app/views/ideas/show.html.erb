@@ -1,15 +1,17 @@
 <% if policy(@idea).show? %>
   <div id="idea-show">
+    <h5 class="date"><%= @idea.created_at.strftime("%d %B %Y") %></h5>
     <h3 class="title"><%= @idea.title %></h3>
+    <hr>
     <h1 class="tagline"><%= @idea.tagline %></h1>
 
     <div class="idea-body">
       <p><%= markdown_to_html @idea.body %></p>
     </div>
 
-
+  <div class="bottom-nav">
     <hr>
-    <h3 class="bottom-nav">
+    <h3>
       <%= mail_to 'ching@casanovatapia.com', 'Contact me' %>
       or
       <%= link_to 'previous page', :back %>
@@ -20,6 +22,7 @@
         <%= link_to 'Delete', @idea, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
       <% end %>
     </p>
+  </div>
 
   </div>
 <% end %>

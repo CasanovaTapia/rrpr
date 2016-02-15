@@ -14,6 +14,9 @@ class EntriesController < ApplicationController
     authorize @entry
   end
 
+  def show
+  end
+
   def create
     @entry = Entry.new(entry_params)
 
@@ -60,7 +63,7 @@ class EntriesController < ApplicationController
   private
 
   def set_entry
-    @entry = Entry.find(params[:id])
+    @entry = Entry.friendly.find(params[:id])
   end
 
   def entry_params

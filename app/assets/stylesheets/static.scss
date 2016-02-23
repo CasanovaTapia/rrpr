@@ -1,6 +1,6 @@
 #hero {
   height: 100vh;
-  padding-top: 40vh;
+  padding-top: 45vh;
   background-image: url("hero.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,11 +14,15 @@
     display: block;
     margin: 0 auto;
   }
+
+  // Big
   @media screen and (min-width:768px) {
     .btn-head {
       margin-top: 100px;
     }
   }
+
+  // Mobile
   @media screen and (max-width:767px) {
     background-image: url("mobile-hero.png");
     background-repeat: no-repeat;
@@ -26,6 +30,9 @@
     background-position: bottom center;
     .btn-head {
       margin-top: 200px;
+    }
+    img {
+      max-width: 250px;
     }
   }
 }
@@ -50,26 +57,47 @@
 }
 
 #about {
+  // Big
   @media screen and (min-width:768px) {
     padding: 25vh 45vw 25vh 15vw;
-
     background-image: url("contact.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom left;
+    img {
+      display: block;
+      margin-top: 5vh;
+      width: 50px;
+    }
   }
 
+  // Mobile
   @media screen and (max-width:767px) {
     padding: 15vh 1vh;
     background: #8d799a;
+    img {
+      display: block;
+      margin: 2vh auto;
+      width: 25px;
+    }
   }
 
 }
 
 #contact {
   min-height: 100vh;
+
+  // Big
   @media screen and (min-width:768px) {
     padding-top: 10vh;
+  }
+
+  // Mobile
+  @media screen and (max-width:767px) {
+    .btn {
+      display: block;
+      margin: auto;
+    }
   }
 }
 

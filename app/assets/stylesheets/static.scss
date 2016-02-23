@@ -1,3 +1,11 @@
+@media screen and (max-width:767px) {
+  #hero,
+  #about,
+  #contact {
+    padding: 0 20px;
+  }
+}
+
 #hero {
   height: 100vh;
   padding-top: 45vh;
@@ -70,8 +78,6 @@
 
   // Mobile
   @media screen and (max-width:767px) {
-    margin: 0 -15px;
-    padding: 0 20px;
     padding-top: 15vh;
     h1 {
       text-align: center;
@@ -138,7 +144,6 @@
 
   // Mobile
   @media screen and (max-width:767px) {
-    padding: 15vh 2vh;
     h1 {
       margin-bottom: 5vh;
     }

@@ -72,6 +72,7 @@
   @media screen and (max-width:767px) {
     margin: 0 -15px;
     padding: 0 20px;
+    padding-top: 15vh;
     h1 {
       text-align: center;
     }
@@ -95,7 +96,6 @@
 
   // Mobile
   @media screen and (max-width:767px) {
-    padding: 15vh 2vh;
     background-color: #8d799a;
     height: 100vh;
     img {

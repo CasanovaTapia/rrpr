@@ -4,7 +4,7 @@
   background-image: url("hero.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: top center;
   img {
     display: block;
     margin: 0 auto;
@@ -152,7 +152,7 @@
   and (max-device-width: 1024px)
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 1) {
-    padding: 5vh 10vw;
+    padding: 10vh 10vw;
   }
 }
 

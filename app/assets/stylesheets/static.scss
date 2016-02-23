@@ -48,33 +48,25 @@
 
 #about {
   @media screen and (min-width:768px) {
-    padding: 25vh 40vh;
+    padding: 25vh 45vw 25vh 15vw;
+
+    background-image: url("contact.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
   }
+
   @media screen and (max-width:767px) {
     padding: 15vh 1vh;
+    background: #8d799a;
   }
 
 }
 
 #contact {
   min-height: 100vh;
-  .btn {
-    display: block;
-    margin: 0 auto;
-  }
   @media screen and (min-width:768px) {
     padding-top: 10vh;
-    background-image: url("contact.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-  }
-
-  @media screen and (max-width:767px) {
-    background-image: url("contact-mobile.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
   }
 }
 

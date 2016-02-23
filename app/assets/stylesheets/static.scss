@@ -35,6 +35,18 @@
       max-width: 250px;
     }
   }
+
+  // Mobile Landscape
+  @media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+  and (orientation : landscape) {
+    background-image: url("hero.png");
+    padding-top: 30vh;
+    .btn-head {
+      margin-top: 20px;
+    }
+  }
 }
 
 

@@ -52,14 +52,6 @@ class EntriesController < ApplicationController
     end
   end
 
-  def media
-    @entries = Entry.where(category_id: 1)
-  end
-
-  def dev
-    @entries = Entry.where(category_id: 2)
-  end
-
   private
 
   def set_entry

@@ -12,10 +12,10 @@
 <body>
 <div id="container">
   <div id="header">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
       <%= link_to(root_path) do %>
-        <%= image_tag("logochar.png") %>
-      <% end %>
+        <%= image_tag("text-black.png") %>
+      <% end %> -->
       <!-- <div class="btn-group">
         <button type="button" class="btn btn-nav dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="caret"></span>
@@ -32,7 +32,7 @@
           <li><a href="#">Separated link</a></li>
         </ul>
       </div> -->
-    </nav>
+    <!-- </nav> -->
     <!-- Flash messages  -->
     <% if flash[:notice] %>
       <div class="alert alert-success">
@@ -60,7 +60,7 @@
 
   <div id="footer">
     <p class="small text-center">
-      Casanova Tapia 2016.
+      <%= image_tag("ct-white.png") %> 2016.
     </p>
   </div>
 

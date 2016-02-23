@@ -1,14 +1,80 @@
-#home {
-  min-height: 100vh;
-  h3 {
-    font-family: 'Playfair Display';
-    font-weight: 700;
-    letter-spacing: .02em;
+#hero {
+  height: 100vh;
+  padding-top: 40vh;
+  background-image: url("hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  .btn-head {
+    display: block;
+    margin: 0 auto;
+  }
+  @media screen and (min-width:768px) {
+    .btn-head {
+      margin-top: 100px;
+    }
   }
   @media screen and (max-width:767px) {
-    h3 {
-      font-size: 18px;
+    background-image: url("mobile-hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    .btn-head {
+      margin-top: 200px;
     }
+  }
+}
+
+
+#about, #contact {
+  // Big
+  @media screen and (min-width:768px) {
+    padding: 0 40vh;
+    h1 {
+      margin-bottom: 5vh;
+    }
+  }
+
+  // Mobile
+  @media screen and (max-width:767px) {
+    padding: 5vh 1vh;
+  }
+}
+
+#about {
+  @media screen and (min-width:768px) {
+    padding: 25vh 40vh;
+  }
+  @media screen and (max-width:767px) {
+    padding: 15vh 1vh;
+  }
+
+}
+
+#contact {
+  min-height: 100vh;
+  .btn {
+    display: block;
+    margin: 0 auto;
+  }
+  @media screen and (min-width:768px) {
+    padding-top: 10vh;
+    background-image: url("contact.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  @media screen and (max-width:767px) {
+    background-image: url("contact-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
   }
 }
 

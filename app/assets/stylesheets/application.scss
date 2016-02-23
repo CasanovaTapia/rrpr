@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(https://fonts.googleapis.com/css?family=Unna);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 @import "static.scss";
 @import "entries.scss";
 @import "ideas.scss";
@@ -14,12 +14,9 @@ html, body {
   min-height: 100%;
   position: relative;
 }
-
-#header {
-  padding: 10px;
-}
 #body {
-  padding: 15vh;
+  margin: 0;
+  margin-bottom: 0;
   padding-bottom: 50px; // Height of footer
 }
 #footer {
@@ -27,16 +24,21 @@ html, body {
   bottom: 0;
   width: 100%;
   height: 50px;
-  background: inherit;
+  background: transparent;
+  img {
+    width: 150px;
+    margin-top: -5px;
+  }
 }
 
 body {
-  background-color: rgba(250,250,250,1);
+  background-color: rgba(55,55,55,1);
+  color: #fff;
 }
 
 @media screen and (max-width:767px) {
   #body {
-    padding: 10vh 1vh;
+    margin: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -46,13 +48,13 @@ body {
 // FONTS
 hr {
   height: 2px;
-  background: #FF69B4;
+  background: #8e44ad;
   margin-bottom: -15px;
 }
 p {
-  font-family: 'Playfair Display';
-  font-weight: 700;
-  letter-spacing: .02em;
+  letter-spacing: .1em;
+  font-size: 1em;
+  line-height: 2.4em;
 }
 a {
   color: #555;
@@ -61,29 +63,45 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #FF69B4;
+  color: #8e44ad;
   text-decoration: none;
 }
 h1,h2,h3,h4,h5,h6 {
+  font-family: 'Helvetica';
+  text-transform: uppercase;
   font-weight: bold;
 }
 @media screen and (max-width:767px) {
   p {
-    font-size: 1.2em;
+    line-height: 2em;
   }
 }
 @media screen and (min-width:768px) {
-  h1 {
-    font-size: 5em;
-  }
-  p {
-    font-size: 1.4em;
-    line-height: 1.8em;
-  }
 }
 @media (min-width: 1200px) {
-
 }
+
+// BUTTONS
+.btn {
+  border: solid 2px #fff;
+  color: #fff;
+  background: 0 0;
+  width: 200px;
+  font-style: bold;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  border-radius: 0;
+  padding: 1.5%;
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+  background: #fff;
+  color: #333;
+  border: solid 2px #fff;
+}
+
 
 // NAV BAR
 nav {

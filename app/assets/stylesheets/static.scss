@@ -47,6 +47,16 @@
       margin-top: 30px;
     }
   }
+
+  // Tablet Portrait
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    background-image: url("mobile-hero.png");
+  }
+
 }
 
 
@@ -75,7 +85,7 @@
     background-image: url("contact.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom left;
+    background-position: bottom right;
     img {
       display: block;
       margin-top: 5vh;
@@ -86,12 +96,34 @@
   // Mobile
   @media screen and (max-width:767px) {
     padding: 15vh 1vh;
-    background: #8d799a;
+    background-color: #8d799a;
     img {
       display: block;
       margin: 2vh auto;
       width: 25px;
     }
+  }
+
+  // Mobile Portrait
+  @media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+  and (orientation : portrait) {
+    background-image: url("contact-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+  }
+
+  // Tablet Portrait
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    background-image: url("contact-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
   }
 
 }
@@ -112,6 +144,15 @@
       display: block;
       margin: auto;
     }
+  }
+
+  // Tablet Portrait
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    padding: 5vh 10vw;
   }
 }
 
